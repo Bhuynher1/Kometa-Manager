@@ -1,0 +1,9 @@
+type: image
+url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/studio-top-left/<<key>>.png
+horizontal_align: left
+horizontal_offset: 0
+vertical_align: top
+vertical_offset: 0
+back_width: 1000
+back_height: 1500
+back_color: 00
