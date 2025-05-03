@@ -1,0 +1,321 @@
+## Plex and TMDb are the two connections which are required for the script to run
+## Can be individually specified per library as well; REQUIRED for the script to run
+
+plex:                                
+  url: # Local URL to Plex Browser
+  token: # Taken from Plex XToken found either in URL Link or through other means
+  timeout: 60
+  db_cache: 40
+  clean_bundles: true
+  empty_trash: true
+  optimize: true
+  verify_ssl: true
+tmdb:
+  apikey: # API Key taken from TMDB after creating TMDB API account
+  cache_expiration: 60
+  language: en
+  region:
+
+## At least one library has to be configured for the script to do anything meaningful
+libraries:
+  Movies:
+    collection_files:
+    - url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/collection_files/better_new_and_old_movie_releases.yml
+
+    - pmm: content_rating_cs
+      template_variables:
+        use_separator: false
+        collection_mode: hide
+        url_poster: https://raw.githubusercontent.com/s0len/meta-manager-config/main/posters/commonsense/<<key>>.jpg
+
+    overlay_files:
+      # Creates a ribbon style background in the top left corner with a width of 313 pixels. Keep in mind, it has to be run before any overlay which is supposed to be on top of the background
+      - url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/background_top_left_313_wide.yml
+      
+      # Resolution in the upper left corner in 45 degree format
+      - pmm: resolution
+        template_variables:
+          url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/resolution-top-left-45deg/<<overlay_name>>.png
+          horizontal_align: left
+          horizontal_offset: 0
+          vertical_offset: 0
+          vertical_align: top
+          final_horizontal_offset: 0
+          final_vertical_offset: 0
+          back_width: 1000
+          back_height: 1500
+          back_color: 00
+
+      # Audio in the upper left corner in 45 degree format
+      - pmm: audio_codec
+        template_variables:
+          url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/audio-top-left-45deg/<<key>>.png
+          horizontal_align: left
+          horizontal_offset: 0
+          vertical_offset: 0
+          vertical_align: top
+          back_width: 1000
+          back_height: 1500
+          back_color: 00
+
+      # Award ribbons in the bottom right corner
+      #- url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/ribbon_awards.yml
+
+      # IMDB ribbons in the bottom right corner
+      #- url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/ribbon_imdb.yml
+
+      # Rotten tomatoes ribbons in the bottom right corner
+      - url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/ribbon_rotten.yml
+
+      # Trending ribbons in the bottom right corner
+      #- url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/ribbon_trending.yml
+
+
+  TV Shows:
+    collection_files:
+      - url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/collection_files/better_new_and_old_tv_shows_releases.yml
+      
+    overlay_files:
+      # Status in the top left corner
+      - pmm: status
+        template_variables:
+          text_airing: .
+          url_airing: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/status-top-left/airing.png
+          text_returning: .
+          url_returning: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/status-top-left/returning.png
+          text_canceled: . 
+          url_canceled: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/status-top-left/cancelled.png
+          text_ended: .
+          url_ended: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/status-top-left/ended.png
+          horizontal_align: left
+          horizontal_offset: 25
+          vertical_align: top
+          vertical_offset: 0
+          font_size: 1
+          font_color: '#00000000'
+          back_color: '#00000000'
+          back_width_airing: 1000
+          back_width_returning: 1000
+          back_width_ended: 1000
+          back_width_cancelled: 1000
+          back_width: 1000
+          back_height_airing: 1500
+          back_height_returning: 1500
+          back_height_ended: 1500
+          back_height_cancelled: 1500
+          back_height: 1500
+          back_padding: 0
+          back_line_width: 1000
+          final_horizontal_offset: 0
+          final_vertical_offset: 0
+
+      # Fallback Network logo which is overwritten by pmm: network if it finds an image for the network. Must run before pmm: network.
+      - url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/network_fallback.yml
+
+      # Uses the default PMM network but replaces the image with custom ones
+      - pmm: network
+        template_variables:
+          horizontal_align: left
+          horizontal_offset: 0
+          vertical_offset: 0
+          vertical_align: top
+          back_width: 1000
+          back_height: 1500
+          url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/network-top-left/<<key>>.png 
+          back_color: 00 
+
+  Anime:
+    overlay_files:
+      - pmm: studio
+        template_variables:
+          horizontal_align: left
+          horizontal_offset: 0
+          vertical_align: top
+          vertical_offset: 0
+          back_width: 1000
+          back_height: 1500
+          url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/studio-top-left/<<key>>.png
+          back_color: 00
+      - pmm: status
+        template_variables:
+          text_airing: .
+          url_airing: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/status-top-left/airing.png
+          text_returning: .
+          url_returning: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/status-top-left/returning.png
+          text_canceled: . 
+          url_canceled: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/status-top-left/cancelled.png
+          text_ended: .
+          url_ended: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/status-top-left/ended.png
+          horizontal_align: left
+          horizontal_offset: 25
+          vertical_align: top
+          vertical_offset: 0
+          font_size: 1
+          font_color: '#00000000'
+          back_color: '#00000000'
+          back_width_airing: 1000
+          back_width_returning: 1000
+          back_width_ended: 1000
+          back_width_cancelled: 1000
+          back_width: 1000
+          back_height_airing: 1500
+          back_height_returning: 1500
+          back_height_ended: 1500
+          back_height_cancelled: 1500
+          back_height: 1500
+          back_padding: 0
+          back_line_width: 1000
+          final_horizontal_offset: 0
+          final_vertical_offset: 0
+
+  Music:
+    collection_files:
+      - file: config/Music.yml       # This is a local file THAT YOU MIGHT CREATE
+
+playlist_files:
+  - default: playlist                # This is a file within Kometa's defaults folder
+    template_variables:
+      libraries: Movies, TV Shows    # list of libraries that you want the Kometa Defaults playlists to look at
+  # see the wiki for how to use local files, folders, URLs, or files from git
+
+settings:
+  run_order:
+  - operations
+  - metadata
+  - collections
+  - overlays
+  cache: true
+  cache_expiration: 60
+  asset_directory:
+  - /assets
+  asset_folders: true
+  asset_depth: 0
+  create_asset_folders: false
+  prioritize_assets: true
+  dimensional_asset_rename: false
+  download_url_assets: true
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: true
+  sync_mode: append
+  minimum_items: 1
+  default_collection_order: release
+  delete_below_minimum: true
+  delete_not_scheduled: false
+  run_again_delay: 2
+  missing_only_released: false
+  only_filter_missing: false
+  show_unmanaged: true
+  show_unconfigured: true
+  show_filtered: false
+  show_unfiltered: false
+  show_options: true
+  show_missing: true
+  show_missing_assets: true
+  save_report: false
+  tvdb_language: eng
+  ignore_ids:
+  ignore_imdb_ids:
+  item_refresh_delay: 0
+  playlist_sync_to_users:
+  playlist_exclude_users:
+  playlist_report: false
+  verify_ssl: true
+  custom_repo:
+  overlay_artwork_filetype: webp_lossy
+  overlay_artwork_quality: 90
+
+webhooks:                            # Can be individually specified per library as well
+  changes:
+  delete:
+  error:
+  run_end:
+  run_start:
+  version:
+
+tautulli:                            # Can be individually specified per library as well
+  url: # Local URL to Tautulli WebUI
+  apikey: # Taken from Tautulli -> Settings
+
+schedule:                            # Specifies when certain pieces are ran. Can be broken down further.
+  movie-updates:
+    schedule: "weekly(mon)"
+    time: "05:00"
+    libraries: Movies
+  tv-updates:
+    schedule: "weekly(wed)"
+    time: "05:00"
+    libraries: TV Shows
+  anime-updates:
+    schedule: "weekly(fri)"
+    time: "05:00"
+    libraries: Anime
+
+radarr:                              # Movies Config
+  url: # Local URL to Tautulli WebUI
+  token: # API Key grabbed from Radarr -> General -> API Key
+  add_missing: true
+  add_existing: false
+  upgrade_existing: false
+  monitor_existing: false
+  root_folder_path: # Location of plex folder where plex can see it 
+  monitor: true
+  availability: announced
+  quality_profile: Ultra-HD
+  tag:
+  search: false
+  radarr_path:
+  plex_path: # Location of plex folder path within your installation
+  ignore_cache: false
+
+sonarr-tvshows:                              # TV Shows Config
+  url: # Local URL to Sonarr WebUI
+  token: # API Key grabbed from Sonarr -> General -> API Key
+  add_missing: true
+  add_existing: false
+  upgrade_existing: false
+  monitor_existing: false
+  root_folder_path: # Location of plex folder where plex can see it 
+  monitor: all
+  quality_profile: Ultra-HD
+  language_profile: English
+  series_type: standard
+  season_folder: true
+  tag:
+  search: false
+  cutoff_search: false
+  sonarr_path:
+  plex_path: # Location of plex folder path within your installation
+  ignore_cache: false
+
+sonarr-anime:                              # Anime Sonarr Config
+  url: # Local URL to Sonarr WebUI
+  token: # API Key grabbed from Sonarr -> General -> API Key
+  add_missing: false
+  add_existing: false
+  upgrade_existing: false
+  monitor_existing: false
+  root_folder_path: # Location of plex folder where plex can see it 
+  monitor: all
+  quality_profile: HD-1080p
+  language_profile: Japanese
+  series_type: standard
+  season_folder: true
+  tag:
+  search: false
+  cutoff_search: false
+  sonarr_path:
+  plex_path: # Location of plex folder path within your installation
+  ignore_cache: false
+
+mal:
+  client_id: # Must be created through MAL API
+  client_secret: # Must be created through MAL API
+  cache_expiration: 60
+  localhost_url: # Must be created through MAL API
+  authorization:
+    # authorization section is autofilled by the script
+    access_token:
+    expires_in:
+    refresh_token:
+    token_type:
