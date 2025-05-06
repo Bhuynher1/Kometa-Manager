@@ -1,0 +1,17 @@
+collections:
+
+  The Godzilla Collection:
+    sort_title: "Godzilla 01"
+    sync_mode: sync
+    collection_order: custom
+    summary: >
+      The legendary King of Monsters, Godzilla, wreaks havoc across cities and battles other creatures, with a legacy of destruction that spans decades of films.
+    radarr_add: true
+    radarr_search: true
+    collection_items:
+      - tmdb: 2117      # Godzilla (1998)
+      - tmdb: 1264729   # Godzilla Minus One (2023)
+    visible_library: true
+    visible_home: true
+    visible_shared: true
+    url_poster: https://raw.githubusercontent.com/Bhuynher1/Kometa-Manager/9c622b37df29941bcf5d91b5f2674f38f076ca9e/posters/godzilla-collection.jpg

@@ -1,0 +1,15 @@
+collections:
+
+  New Movie Releases: # SMART COLLECTION
+    #variables: {your variables}
+    #template: {name: your_template}
+    smart_filter:
+      sort_by: added.desc
+      all:
+        added: 92
+        release: 365
+      limit: 250
+    summary: New releases added in the past three months. Sorted by Date Added.
+    visible_library: true
+    sort_title: "!008_New_Releases"
+    url_poster: https://raw.githubusercontent.com/s0len/meta-manager-config/main/posters/new-releases/New_Movie_Releases.jpg
