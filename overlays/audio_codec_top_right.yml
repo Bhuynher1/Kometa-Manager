@@ -30,3 +30,6 @@ overlays:
     template: {name: Audio, audioTitle: '(?i)\b(aac|stereo|2\.0)\b', group: "audio", weight: 10, position: 'audio-top-right'}
 
 ### AUDIO CODEC ###
+
+filters:
+  audio_codec.exists: true

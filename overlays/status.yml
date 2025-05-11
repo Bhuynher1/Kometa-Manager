@@ -46,3 +46,6 @@ overlays:
          - canceled
 
 ### SHOW STATUS ###
+
+filters:
+  status.exists: true

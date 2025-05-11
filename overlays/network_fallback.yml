@@ -13,3 +13,6 @@ overlays:
     overlay:
       name: crave
       url: https://raw.githubusercontent.com/s0len/meta-manager-config/main/overlays/network-top-left/Crave.png 
+
+filters:
+  network.exists: true

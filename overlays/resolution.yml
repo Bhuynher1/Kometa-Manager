@@ -24,3 +24,6 @@ overlays:
     template: {name: Resolution, regex: '(?i)SD', hdr: false, DV: '', group: "resolution-SD", weight: 70}
 
 ### RESOLUTIONS ###
+
+filters:
+  resolution.exists: true
