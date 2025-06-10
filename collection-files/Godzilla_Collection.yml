@@ -8,7 +8,7 @@ collections:
       The legendary King of Monsters, Godzilla, wreaks havoc across cities and battles other creatures, with a legacy of destruction that spans decades of films.
     radarr_add: true
     radarr_search: true
-    items:
+    tmdb_movie:
       - tmdb: 929      # Godzilla (1998)
       - tmdb: 940721   # Godzilla Minus One (2023)
     visible_library: true

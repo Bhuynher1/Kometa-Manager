@@ -8,7 +8,7 @@ collections:
       A trio of visually stunning and emotionally resonant films from visionary director Makoto Shinkai, exploring love, time, and fate across beautifully animated worlds.
     radarr_add: true
     radarr_search: true
-    collection_items:
+    tmdb_movie:
       - tmdb: 372058    # Your Name (2016)
       - tmdb: 568160    # Weathering with You (2019)
       - tmdb: 916224    # Suzume (2022)
