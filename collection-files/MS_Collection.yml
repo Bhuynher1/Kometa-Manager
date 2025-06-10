@@ -3,7 +3,7 @@ collections:
   The Makoto Shinkai Trilogy:
     sort_title: "Shinkai 01"
     sync_mode: sync
-    collection_order: custom
+    collection_order: release
     summary: >
       A trio of visually stunning and emotionally resonant films from visionary director Makoto Shinkai, exploring love, time, and fate across beautifully animated worlds.
     radarr_add: true
