@@ -3,15 +3,12 @@ collections:
   The Dune Collection:
     sort_title: "Dune 01"
     sync_mode: sync
-    collection_order: custom
+    collection_order: release
     summary: >
       Explore the epic saga of the desert planet Arrakis, where politics, mysticism, and warfare collide in a battle for control of the universe's most valuable resource, spice.
+    tmdb_collection: 1219386  # Dune Collection (2021–)
     radarr_add: true
     radarr_search: true
-    collection_items:
-      - tmdb: 592350    # Dune (2021)
-      - tmdb: 1122334   # Dune: Part Two (2024)
-      # - tmdb: TBD      # Future Dune entries (e.g., Dune: Part Three, spin-offs)
     visible_library: true
     visible_home: true
     visible_shared: true

@@ -1,15 +1,15 @@
 collections:
+collections:
 
- Old Movies Just Added: # SMART COLLECTION
-    #variables: {your variables}
-    #template: {name: your_template}
+  Old Movies Just Added:  # SMART COLLECTION
     smart_filter:
       sort_by: added.desc
       all:
-        added: 30
-        release.not: 365
-      limit: 250
-    summary: Older releases added in the past month. Sorted by Date Added.
+        added: 30             # Added in past 30 days
+        release.not: 365      # Exclude releases in past 365 days (i.e., older movies)
+      limit: 5
+    summary: >
+      Older releases added in the past month. Sorted by Date Added.
     visible_library: true
     sort_title: "!009_Old_Movies_Just_Added"
-    url_poster: https://raw.githubusercontent.com/s0len/meta-manager-config/main/posters/new-releases/Old_Movies_Just_Added.jpg
+    url_poster: https://raw.githubusercontent.com/Bhuynher1/Kometa-Manager/blob/main/posters/new-releases/Old_Movies_Just_Added.jpg

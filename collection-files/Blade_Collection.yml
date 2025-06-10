@@ -1,18 +1,13 @@
 collections:
-
   The Blade Trilogy:
     sort_title: "Blade 01"
     sync_mode: sync
-    collection_order: custom
+    collection_order: release
     summary: >
       Follow the half-vampire, half-human Daywalker Blade as he battles the vampire underworld in this gritty and stylish action trilogy.
     tmdb_collection: 735
-    radarr_add: true
+    radarr_add_missing: true
     radarr_search: true
-    collection_items:
-      - tmdb: 36647     # Blade (1998)
-      - tmdb: 36586     # Blade II (2002)
-      - tmdb: 36648     # Blade: Trinity (2004)
     visible_library: true
     visible_home: true
     visible_shared: true

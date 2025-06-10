@@ -3,12 +3,12 @@ collections:
   The Godzilla Collection:
     sort_title: "Godzilla 01"
     sync_mode: sync
-    collection_order: custom
+    collection_order: release
     summary: >
       The legendary King of Monsters, Godzilla, wreaks havoc across cities and battles other creatures, with a legacy of destruction that spans decades of films.
     radarr_add: true
     radarr_search: true
-    collection_items:
+    items:
       - tmdb: 2117      # Godzilla (1998)
       - tmdb: 1264729   # Godzilla Minus One (2023)
     visible_library: true

@@ -5,10 +5,11 @@ collections:
     smart_filter:
       sort_by: episode_added.desc
       all:
-        episode_added: 92
-        episode_air_date: 365
-      limit: 250
-    summary: New releases added in the past three months. Sorted by Date Added.
+        episode_added: 92       # Episodes added in past ~3 months
+        episode_air_date: 365   # Episodes aired in past year
+      limit: 5
+    summary: >
+      New releases added in the past three months. Sorted by Date Added.
     visible_library: true
     sort_title: "!008_New_Releases"
-    url_poster: https://raw.githubusercontent.com/s0len/meta-manager-config/main/posters/new-releases/New_TV_Show_Releases.jpg
+    url_poster: https://raw.githubusercontent.com/Bhuynher1/Kometa-Manager/blob/main/posters/new-releases/New_TV_Show_Releases.jpg

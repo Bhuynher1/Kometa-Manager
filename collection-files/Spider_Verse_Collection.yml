@@ -3,15 +3,12 @@ collections:
   The Spider-Verse Collection:
     sort_title: "Spider-Verse 01"
     sync_mode: sync
-    collection_order: custom
+    collection_order: release
     summary: >
       Dive into the multiverse with Miles Morales and friends in this groundbreaking animated series of Spider-Man films that redefined superhero storytelling.
+    tmdb_collection: 573436
     radarr_add: true
     radarr_search: true
-    collection_items:
-      - tmdb: 324857    # Spider-Man: Into the Spider-Verse (2018)
-      - tmdb: 569094    # Spider-Man: Across the Spider-Verse (2023)
-      # - tmdb: TBD     # Spider-Man: Beyond the Spider-Verse (TBA)
     visible_library: true
     visible_home: true
     visible_shared: true

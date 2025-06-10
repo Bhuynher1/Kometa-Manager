@@ -3,14 +3,12 @@ collections:
   The Transformers Collection:
     sort_title: "Transformers 01"
     sync_mode: sync
-    collection_order: custom
+    collection_order: release
     summary: >
       A high-octane action franchise about the battle between the Autobots and Decepticons, spanning multiple generations of robots and humanity.
+    tmdb_collection: 8650
     radarr_add: true
     radarr_search: true
-    collection_items:
-      - tmdb: 878693    # Transformers: Rise of the Beasts (2023)
-      - tmdb: 112233    # Transformers One (2023)
     visible_library: true
     visible_home: true
     visible_shared: true

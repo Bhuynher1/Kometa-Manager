@@ -3,16 +3,12 @@ collections:
   The Rush Hour Trilogy:
     sort_title: "Rush Hour 01"
     sync_mode: sync
-    collection_order: custom
+    collection_order: release
     summary: >
       Follow Detectives Carter and Lee as they team up across continents in this action-comedy trilogy packed with martial arts, laughs, and unforgettable one-liners.
     tmdb_collection: 90859
     radarr_add: true
     radarr_search: true
-    collection_items:
-      - tmdb: 2109      # Rush Hour (1998)
-      - tmdb: 5175      # Rush Hour 2 (2001)
-      - tmdb: 5176      # Rush Hour 3 (2007)
     visible_library: true
     visible_home: true
     visible_shared: true
