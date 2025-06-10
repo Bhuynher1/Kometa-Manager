@@ -12,4 +12,4 @@ collections:
     summary: New releases added in the past three months. Sorted by Date Added.
     visible_library: true
     sort_title: "!008_New_Releases"
-    url_poster: https://raw.githubusercontent.com/Bhuynher1/Kometa-Manager/blob/main/posters/new-releases/New_Movie_Releases.jpg
+    url_poster: https://raw.githubusercontent.com/Bhuynher1/Kometa-Manager/main/posters/new-releases/New_Movie_Releases.jpg

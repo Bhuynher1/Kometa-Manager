@@ -12,4 +12,4 @@ collections:
     summary: Older shows added in the past month. Sorted by Date Added.
     visible_library: true
     sort_title: "!009_Old_Movies_Just_Added"
-    url_poster: https://raw.githubusercontent.com/Bhuynher1/Kometa-Manager/blob/main/posters/new-releases/Old_Shows_Just_Added.jpg
+    url_poster: https://raw.githubusercontent.com/Bhuynher1/Kometa-Manager/main/posters/new-releases/Old_Shows_Just_Added.jpg
