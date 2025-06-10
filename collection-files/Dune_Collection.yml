@@ -6,7 +6,7 @@ collections:
     collection_order: release
     summary: >
       Explore the epic saga of the desert planet Arrakis, where politics, mysticism, and warfare collide in a battle for control of the universe's most valuable resource, spice.
-    tmdb_collection: 1219386  # Dune Collection (2021–)
+    tmdb_collection: 1219386  # Dune Collection (2021)
     radarr_add: true
     radarr_search: true
     visible_library: true
