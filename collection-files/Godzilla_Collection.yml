@@ -9,8 +9,8 @@ collections:
     radarr_add: true
     radarr_search: true
     items:
-      - tmdb: 2117      # Godzilla (1998)
-      - tmdb: 1264729   # Godzilla Minus One (2023)
+      - tmdb: 929      # Godzilla (1998)
+      - tmdb: 940721   # Godzilla Minus One (2023)
     visible_library: true
     visible_home: true
     visible_shared: true

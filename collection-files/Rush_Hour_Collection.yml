@@ -6,7 +6,7 @@ collections:
     collection_order: release
     summary: >
       Follow Detectives Carter and Lee as they team up across continents in this action-comedy trilogy packed with martial arts, laughs, and unforgettable one-liners.
-    tmdb_collection: 90859
+    tmdb_collection: 90863
     radarr_add: true
     radarr_search: true
     visible_library: true
