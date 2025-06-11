@@ -2,7 +2,7 @@ overlays:
   studio_top_left:
     pmm: studio
     template_variables:
-      url: https://raw.githubusercontent.com/Bhuynher1/Kometa-Manager/blob/main/overlays/studio-top-left/<<key>>.png
+      url: https://raw.githubusercontent.com/Bhuynher1/Kometa-Manager/main/overlays/studio-top-left/<<key>>.png
       horizontal_align: left
       horizontal_offset: 0
       vertical_align: top
