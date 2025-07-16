@@ -5,8 +5,13 @@ collections:
     collection_order: release
     summary: "A high-octane action franchise about the battle between the Autobots and Decepticons, spanning multiple generations of robots and humanity."
     tmdb_movie:
-      - 667538
-      - 698687
+      - 1858     # Transformers (2007)
+      - 8373     # Revenge of the Fallen (2009)
+      - 38356    # Dark of the Moon (2011)
+      - 91314    # Age of Extinction (2014)
+      - 335988   # The Last Knight (2017)
+      - 424783   # Bumblebee (2018)
+      - 667538   # Rise of the Beasts (2023)
     visible_library: true
     visible_home: true
     visible_shared: true
